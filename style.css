@@ -1,0 +1,386 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3fa;
+  color: #202642;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.logo {
+  color: #6353b8;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+p {
+  line-height: 1.6;
+  color: #596178;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 25px rgba(30, 40, 80, 0.07);
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-weight: bold;
+}
+
+select {
+  padding: 13px;
+  border: 1px solid #d7d8e7;
+  border-radius: 9px;
+  font-size: 15px;
+  background: #fafaff;
+  color: #202642;
+}
+
+select:focus {
+  outline: 2px solid #8d7ce5;
+}
+
+button {
+  margin-top: 25px;
+  padding: 13px 22px;
+  background: #6353b8;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4e3d9e;
+}
+
+.results {
+  text-align: center;
+}
+
+.count {
+  font-size: 58px;
+  font-weight: bold;
+  color: #6353b8;
+  margin: 15px 0;
+}
+
+.progress {
+  width: 100%;
+  height: 15px;
+  background: #e9e7f3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progressFill {
+  width: 0%;
+  height: 100%;
+  background: #6353b8;
+  transition: width 0.3s ease;
+}
+
+#riskMessage {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.note {
+  background: #f2efff;
+  border-left: 4px solid #6353b8;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+@media (max-width: 650px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+
+/* Step-by-step clue analysis */
+
+.clue-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.clue-step {
+  background: #f8f7fd;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e6e2f3;
+}
+
+.clue-step-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.clue-step-label {
+  color: #303653;
+}
+
+.clue-step-count {
+  color: #6353b8;
+  white-space: nowrap;
+}
+
+.clue-progress {
+  height: 12px;
+  background: #e7e4f2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.clue-progress-fill {
+  height: 100%;
+  background: #8171d1;
+  border-radius: 20px;
+  transition: width 0.35s ease;
+}
+
+.clue-step.unique {
+  border-color: #efb3b3;
+  background: #fff5f5;
+}
+
+.clue-step.unique .clue-progress-fill {
+  background: #d35b5b;
+}
+
+.clue-explanation {
+  font-size: 13px;
+  color: #667085;
+  margin-top: 9px;
+}
+
+@media (max-width: 650px) {
+  .clue-step-header {
+    flex-direction: column;
+  }
+}
+
+
+/* Social media investigation */
+
+.investigation-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: #f4f1ff;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.profile-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #dcd5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+
+.investigation-profile p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+.social-posts {
+  display: grid;
+  gap: 16px;
+}
+
+.social-post {
+  padding: 20px;
+  background: #faf9ff;
+  border: 1px solid #e6e2f3;
+  border-radius: 14px;
+}
+
+.post-text {
+  color: #303653;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.post-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.post-clue {
+  color: #6353b8;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.investigate-btn {
+  margin-top: 0;
+}
+
+.discovered-panel {
+  background: #f4f1ff;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+.discovered-panel h3 {
+  margin-top: 0;
+}
+
+.discovered-clue {
+  padding: 10px 12px;
+  background: white;
+  border-radius: 8px;
+  margin: 8px 0;
+  color: #4d438d;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  .post-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+/* Privacy Protection Simulator */
+
+.protection-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.protection-option {
+  padding: 15px;
+  background: #f8f7fd;
+  border: 1px solid #e6e2f3;
+  border-radius: 10px;
+}
+
+.protection-option label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.protection-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: #6353b8;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.comparison-card {
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.comparison-card.before {
+  background: #fff0f0;
+}
+
+.comparison-card.after {
+  background: #edf9f3;
+}
+
+.comparison-card h3 {
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.comparison-number {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.before .comparison-number {
+  color: #c44343;
+}
+
+.after .comparison-number {
+  color: #16845b;
+}
+
+.protection-message {
+  margin-top: 20px;
+  padding: 14px;
+  background: #f4f1ff;
+  border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+  .protection-options,
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+}

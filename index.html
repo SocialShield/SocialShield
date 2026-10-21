@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>SocialShield | Digital Footprint Detective</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+
+    <header>
+      <div class="logo">🛡️ SocialShield</div>
+      <h1>Digital Footprint Detective</h1>
+      <p>
+        Discover how small pieces of information
+        can reveal someone's identity.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Select Publicly Shared Clues</h2>
+      <p>
+        Choose information that a fictional user
+        has shared on social media.
+      </p>
+
+      <div class="filters">
+
+        <label>
+          Age
+          <select id="age">
+            <option value="">Any age</option>
+          </select>
+        </label>
+
+        <label>
+          City
+          <select id="city">
+            <option value="">Any city</option>
+          </select>
+        </label>
+
+        <label>
+          University
+          <select id="university">
+            <option value="">Any university</option>
+          </select>
+        </label>
+
+        <label>
+          Major
+          <select id="major">
+            <option value="">Any major</option>
+          </select>
+        </label>
+
+        <label>
+          Workplace
+          <select id="workplace">
+            <option value="">Any workplace</option>
+          </select>
+        </label>
+
+        <label>
+          Posting Time
+          <select id="postingTime">
+            <option value="">Any posting time</option>
+          </select>
+        </label>
+
+      </div>
+
+      <button id="resetBtn">Clear All Clues</button>
+    </section>
+
+    <section class="card results">
+      <h2>Privacy Analysis</h2>
+
+      <p>Matching fictional profiles</p>
+
+      <div class="count" id="matchCount">—</div>
+
+      <div class="progress">
+        <div id="progressFill"></div>
+      </div>
+
+      <p id="riskMessage">
+        Loading dataset...
+      </p>
+    </section>
+
+    
+    <section class="card">
+    <h2>Step-by-Step Clue Analysis</h2>
+
+    <p>
+        See how each publicly shared detail reduces
+        the number of possible matching profiles.
+    </p>
+
+    <div id="clueSteps" class="clue-steps">
+        <p>Select clues above to see the analysis.</p>
+    </div>
+    </section>
+
+    
+    <section class="card" id="postInvestigation">
+    <h2>Social Media Post Investigation</h2>
+
+    <p>
+        Investigate fictional social media posts.
+        Discover what personal information each post reveals.
+    </p>
+
+    <div class="investigation-profile">
+        <div class="profile-avatar">👤</div>
+
+        <div>
+        <strong>Anonymous Student</strong>
+        <p>Public fictional social media profile</p>
+        </div>
+    </div>
+
+    <div id="socialPosts" class="social-posts"></div>
+
+    <div class="discovered-panel">
+        <h3>Discovered Clues</h3>
+
+        <div id="discoveredClues">
+        No clues discovered yet.
+        </div>
+
+        <button id="clearInvestigationBtn">
+        Clear Investigation
+        </button>
+    </div>
+    </section>
+
+    
+    <section class="card" id="privacySimulator">
+    <h2>Privacy Protection Simulator</h2>
+
+    <p>
+        Discover how hiding publicly shared information
+        changes the number of possible identities.
+    </p>
+
+    <div class="protection-options" id="protectionOptions">
+    </div>
+
+    <div class="comparison">
+        <div class="comparison-card before">
+        <h3>Before Protection</h3>
+        <div class="comparison-number" id="beforeCount">—</div>
+        <p>Matching fictional profiles</p>
+        </div>
+
+        <div class="comparison-card after">
+        <h3>After Protection</h3>
+        <div class="comparison-number" id="afterCount">—</div>
+        <p>Matching fictional profiles</p>
+        </div>
+    </div>
+
+    <p id="protectionMessage" class="protection-message"></p>
+
+    <button id="resetProtectionBtn">
+        Reset Protection
+    </button>
+    </section>
+
+
+
+
+    <section class="card">
+      <h2>How This Relates to Privacy</h2>
+      <p>
+        Age, city, university, and other details
+        can act as quasi-identifiers.
+        Combining them may narrow down
+        a person's possible identity.
+      </p>
+      <p class="note">
+        All profiles are fictional. A unique
+        match in this sample does not prove
+        that a real person can be identified.
+      </p>
+    </section>
+
+  </main>
+</body>
+</html>

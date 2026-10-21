@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SocialShield Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛡️ SocialShield</h1>
+        <p>Privacy Risk Dashboard</p>
+    </header>
+
+    <main>
+
+        <section class="score-card">
+            <h2>Your Privacy Risk Score</h2>
+
+            <div id="score">72%</div>
+
+            <h3 id="riskLevel">High Risk</h3>
+
+            <p id="riskDescription"></p>
+        </section>
+
+        <section class="card">
+            <h2>Category-Based Risk Scores</h2>
+
+            <div class="category">
+                <p>Account Visibility</p>
+                <div class="bar">
+                    <div id="visibilityBar"></div>
+                </div>
+                <span id="visibilityScore"></span>
+            </div>
+
+            <div class="category">
+                <p>Personal Information</p>
+                <div class="bar">
+                    <div id="personalBar"></div>
+                </div>
+                <span id="personalScore"></span>
+            </div>
+
+            <div class="category">
+                <p>Location Sharing</p>
+                <div class="bar">
+                    <div id="locationBar"></div>
+                </div>
+                <span id="locationScore"></span>
+            </div>
+
+            <div class="category">
+                <p>Stranger Interaction</p>
+                <div class="bar">
+                    <div id="strangerBar"></div>
+                </div>
+                <span id="strangerScore"></span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Highest-Risk Habits</h2>
+            <ul id="riskyHabits"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Privacy Improvement Simulator</h2>
+
+            <p>
+                Change the settings and observe how your privacy risk improves.
+            </p>
+
+            <label>
+                <input type="checkbox" id="privateAccount">
+                Make my account private
+            </label>
+
+            <label>
+                <input type="checkbox" id="disableLocation">
+                Disable location sharing
+            </label>
+
+            <label>
+                <input type="checkbox" id="hidePersonalInfo">
+                Hide personal information
+            </label>
+
+            <label>
+                <input type="checkbox" id="blockStrangers">
+                Stop accepting requests from strangers
+            </label>
+
+            <div class="comparison">
+                <div>
+                    <h3>Before</h3>
+                    <p id="beforeScore">72%</p>
+                </div>
+
+                <div>
+                    <h3>After</h3>
+                    <p id="afterScore">72%</p>
+                </div>
+            </div>
+
+            <p id="improvement"></p>
+            <p id="newRiskLevel"></p>
+        </section>
+<a class="button" href="index.html">
+    Open Digital Footprint Detective
+        </a>
+
+    </main>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

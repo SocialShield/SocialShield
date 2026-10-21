@@ -1,0 +1,101 @@
+profile_id,age,city,university,major,workplace,posting_time
+P001,21,Al Ain,University A,Data Science,Not shared,Evening
+P002,21,Al Ain,University A,Data Science,Library,Afternoon
+P003,21,Al Ain,University A,Computer Science,Retail Store,Night
+P004,21,Al Ain,University A,Computer Science,Not shared,Morning
+P005,21,Al Ain,University A,Cybersecurity,Bookstore,Morning
+P006,21,Al Ain,University A,Engineering,Library,Evening
+P007,21,Al Ain,University A,Cybersecurity,Cafe,Morning
+P008,21,Al Ain,University A,Data Science,Bookstore,Night
+P009,21,Al Ain,University A,Medicine,Bookstore,Afternoon
+P010,21,Al Ain,University B,Data Science,Tutoring Center,Afternoon
+P011,21,Ajman,University C,Data Science,Not shared,Evening
+P012,21,Dubai,University C,Engineering,Tutoring Center,Evening
+P013,21,Dubai,University D,Business,Cafe,Morning
+P014,21,Abu Dhabi,University B,Computer Science,Not shared,Morning
+P015,21,Dubai,University B,Business,Not shared,Night
+P016,21,Abu Dhabi,University B,Data Science,Tutoring Center,Night
+P017,21,Sharjah,University A,Computer Science,Not shared,Morning
+P018,21,Al Ain,University C,Data Science,Library,Afternoon
+P019,21,Ajman,University B,Business,Bookstore,Night
+P020,21,Ajman,University B,Education,Library,Evening
+P021,23,Sharjah,University D,Cybersecurity,Not shared,Afternoon
+P022,19,Sharjah,University A,Business,Bookstore,Afternoon
+P023,29,Sharjah,University D,Data Science,Tutoring Center,Morning
+P024,28,Abu Dhabi,University A,Business,Cafe,Evening
+P025,24,Ajman,University D,Engineering,Bookstore,Afternoon
+P026,23,Sharjah,University A,Business,Bookstore,Afternoon
+P027,24,Ajman,University A,Medicine,Cafe,Evening
+P028,28,Al Ain,University B,Engineering,Bookstore,Night
+P029,27,Dubai,University D,Data Science,Tutoring Center,Afternoon
+P030,20,Sharjah,University B,Cybersecurity,Retail Store,Night
+P031,20,Abu Dhabi,University B,Business,Library,Afternoon
+P032,28,Sharjah,University C,Medicine,Library,Night
+P033,18,Sharjah,University A,Data Science,Cafe,Afternoon
+P034,28,Sharjah,University A,Cybersecurity,Retail Store,Evening
+P035,29,Ajman,University B,Medicine,Tutoring Center,Evening
+P036,29,Abu Dhabi,University A,Data Science,Tutoring Center,Evening
+P037,21,Abu Dhabi,University B,Data Science,Library,Afternoon
+P038,22,Ajman,University C,Data Science,Cafe,Evening
+P039,19,Abu Dhabi,University A,Education,Cafe,Afternoon
+P040,24,Ajman,University D,Education,Retail Store,Night
+P041,18,Abu Dhabi,University C,Medicine,Library,Night
+P042,30,Al Ain,University D,Business,Retail Store,Night
+P043,28,Abu Dhabi,University A,Education,Library,Evening
+P044,21,Al Ain,University A,Education,Retail Store,Night
+P045,22,Abu Dhabi,University D,Engineering,Tutoring Center,Evening
+P046,26,Ajman,University A,Computer Science,Cafe,Evening
+P047,26,Sharjah,University C,Education,Tutoring Center,Morning
+P048,21,Ajman,University B,Data Science,Retail Store,Morning
+P049,29,Sharjah,University D,Education,Library,Night
+P050,24,Abu Dhabi,University D,Medicine,Bookstore,Afternoon
+P051,28,Abu Dhabi,University B,Data Science,Bookstore,Morning
+P052,26,Ajman,University C,Education,Bookstore,Morning
+P053,21,Abu Dhabi,University C,Medicine,Bookstore,Evening
+P054,25,Abu Dhabi,University C,Cybersecurity,Tutoring Center,Night
+P055,29,Abu Dhabi,University C,Data Science,Not shared,Evening
+P056,30,Sharjah,University C,Data Science,Library,Night
+P057,22,Al Ain,University D,Medicine,Not shared,Afternoon
+P058,19,Abu Dhabi,University D,Engineering,Tutoring Center,Evening
+P059,18,Ajman,University B,Business,Bookstore,Morning
+P060,25,Ajman,University D,Education,Tutoring Center,Night
+P061,24,Abu Dhabi,University D,Data Science,Not shared,Afternoon
+P062,28,Al Ain,University C,Business,Not shared,Morning
+P063,28,Dubai,University C,Cybersecurity,Tutoring Center,Afternoon
+P064,26,Al Ain,University C,Computer Science,Tutoring Center,Morning
+P065,21,Sharjah,University A,Computer Science,Bookstore,Afternoon
+P066,30,Ajman,University C,Medicine,Library,Morning
+P067,20,Al Ain,University D,Business,Library,Night
+P068,29,Abu Dhabi,University B,Cybersecurity,Cafe,Evening
+P069,25,Abu Dhabi,University D,Data Science,Bookstore,Afternoon
+P070,30,Abu Dhabi,University A,Cybersecurity,Retail Store,Evening
+P071,28,Abu Dhabi,University B,Engineering,Retail Store,Evening
+P072,24,Ajman,University A,Business,Not shared,Night
+P073,29,Al Ain,University C,Cybersecurity,Not shared,Afternoon
+P074,22,Ajman,University C,Data Science,Library,Afternoon
+P075,20,Dubai,University D,Engineering,Bookstore,Night
+P076,22,Ajman,University A,Business,Tutoring Center,Morning
+P077,20,Dubai,University B,Engineering,Library,Afternoon
+P078,26,Al Ain,University A,Data Science,Library,Afternoon
+P079,29,Abu Dhabi,University C,Business,Cafe,Afternoon
+P080,21,Dubai,University A,Medicine,Library,Evening
+P081,30,Dubai,University B,Medicine,Not shared,Evening
+P082,24,Al Ain,University C,Data Science,Not shared,Morning
+P083,19,Sharjah,University D,Business,Tutoring Center,Afternoon
+P084,23,Dubai,University C,Engineering,Retail Store,Evening
+P085,26,Sharjah,University A,Medicine,Bookstore,Afternoon
+P086,23,Ajman,University B,Data Science,Library,Afternoon
+P087,30,Dubai,University D,Computer Science,Cafe,Afternoon
+P088,25,Al Ain,University A,Data Science,Not shared,Night
+P089,27,Al Ain,University C,Business,Retail Store,Morning
+P090,27,Abu Dhabi,University B,Computer Science,Bookstore,Evening
+P091,19,Dubai,University A,Business,Library,Morning
+P092,23,Al Ain,University C,Data Science,Cafe,Morning
+P093,26,Abu Dhabi,University C,Data Science,Not shared,Morning
+P094,24,Abu Dhabi,University D,Medicine,Tutoring Center,Evening
+P095,20,Abu Dhabi,University D,Engineering,Bookstore,Morning
+P096,30,Sharjah,University A,Education,Cafe,Morning
+P097,30,Abu Dhabi,University B,Medicine,Retail Store,Afternoon
+P098,30,Dubai,University B,Business,Retail Store,Morning
+P099,26,Sharjah,University A,Data Science,Library,Night
+P100,29,Abu Dhabi,University C,Education,Retail Store,Evening

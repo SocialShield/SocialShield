@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5fb;
+    color: #202942;
+}
+
+header {
+    background: #263b80;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+main {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 18px;
+}
+
+.card,
+.score-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 12px #00000018;
+}
+
+.score-card {
+    text-align: center;
+}
+
+#score {
+    font-size: 60px;
+    font-weight: bold;
+    color: #d54848;
+}
+
+#riskLevel {
+    color: #d54848;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.category p {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.bar {
+    height: 18px;
+    background: #e1e5ee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    width: 0%;
+    background: #e05252;
+    transition: width 0.4s;
+}
+
+label {
+    display: block;
+    background: #f3f6fb;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input {
+    margin-right: 10px;
+}
+
+.comparison {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.comparison p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#afterScore {
+    color: #269b65;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    background: #263b80;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .comparison {
+        display: block;
+    }
+}
