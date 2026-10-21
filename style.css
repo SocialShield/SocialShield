@@ -384,3 +384,19 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.dashboard-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: #263b80;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dashboard-link:hover {
+  background: #3f58ad;
+}
