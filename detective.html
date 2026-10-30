@@ -1,174 +1,197 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Risk Assessment</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>SocialShield | Digital Footprint Detective</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>Privacy Risk Assessment Tool</h1>
+  <main class="container">
+
+    <header>
+      <div class="logo">🛡️ SocialShield</div>
+      <h1>Digital Footprint Detective</h1>
+      <p>
+        Discover how small pieces of information
+        can reveal someone's identity.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Select Publicly Shared Clues</h2>
+      <p>
+        Choose information that a fictional user
+        has shared on social media.
+      </p>
+
+      <div class="filters">
+
+        <label>
+          Age
+          <select id="age">
+            <option value="">Any age</option>
+          </select>
+        </label>
+
+        <label>
+          City
+          <select id="city">
+            <option value="">Any city</option>
+          </select>
+        </label>
+
+        <label>
+          University
+          <select id="university">
+            <option value="">Any university</option>
+          </select>
+        </label>
+
+        <label>
+          Major
+          <select id="major">
+            <option value="">Any major</option>
+          </select>
+        </label>
+
+        <label>
+          Workplace
+          <select id="workplace">
+            <option value="">Any workplace</option>
+          </select>
+        </label>
+
+        <label>
+          Posting Time
+          <select id="postingTime">
+            <option value="">Any posting time</option>
+          </select>
+        </label>
+
+      </div>
+
+      <button id="resetBtn">Clear All Clues</button>
+    </section>
+
+    <section class="card results">
+      <h2>Privacy Analysis</h2>
+
+      <p>Matching fictional profiles</p>
+
+      <div class="count" id="matchCount">—</div>
+
+      <div class="progress">
+        <div id="progressFill"></div>
+      </div>
+
+      <p id="riskMessage">
+        Loading dataset...
+      </p>
+    </section>
+
+    
+    <section class="card">
+    <h2>Step-by-Step Clue Analysis</h2>
 
     <p>
-        Answer these questions to discover if your personal
-        information is safe online.
+        See how each publicly shared detail reduces
+        the number of possible matching profiles.
     </p>
 
-    <form id="privacyForm">
+    <div id="clueSteps" class="clue-steps">
+        <p>Select clues above to see the analysis.</p>
+    </div>
+    </section>
 
-        <h3>1. Is your social-media account public?</h3>
-        <label><input type="radio" name="question1" value="0"> No</label>
-        <label><input type="radio" name="question1" value="1"> Sometimes</label>
-        <label><input type="radio" name="question1" value="2"> Yes</label>
+    
+    <section class="card" id="postInvestigation">
+    <h2>Social Media Post Investigation</h2>
 
-        <h3>2. Do you share your location online?</h3>
-        <label><input type="radio" name="question2" value="0"> No</label>
-        <label><input type="radio" name="question2" value="1"> Sometimes</label>
-        <label><input type="radio" name="question2" value="2"> Yes</label>
+    <p>
+        Investigate fictional social media posts.
+        Discover what personal information each post reveals.
+    </p>
 
-        <h3>3. Do you share your phone number online?</h3>
-        <label><input type="radio" name="question3" value="0"> No</label>
-        <label><input type="radio" name="question3" value="1"> Sometimes</label>
-        <label><input type="radio" name="question3" value="2"> Yes</label>
+    <div class="investigation-profile">
+        <div class="profile-avatar">👤</div>
 
-        <h3>4. Do you use the same password for different accounts?</h3>
-        <label><input type="radio" name="question4" value="0"> No</label>
-        <label><input type="radio" name="question4" value="1"> Sometimes</label>
-        <label><input type="radio" name="question4" value="2"> Yes</label>
+        <div>
+        <strong>Anonymous Student</strong>
+        <p>Public fictional social media profile</p>
+        </div>
+    </div>
 
-        <h3>5. Do you accept friend requests from strangers?</h3>
-        <label><input type="radio" name="question5" value="0"> No</label>
-        <label><input type="radio" name="question5" value="1"> Sometimes</label>
-        <label><input type="radio" name="question5" value="2"> Yes</label>
+    <div id="socialPosts" class="social-posts"></div>
 
-        <br><br>
+    <div class="discovered-panel">
+        <h3>Discovered Clues</h3>
 
-        <button type="button" onclick="calculateRisk()">
-    Calculate My Risk
-</button>
+        <div id="discoveredClues">
+        No clues discovered yet.
+        </div>
 
-<h2 id="result"></h2>
-    </form>
-    <script>
-function calculateRisk() {
-    let score = 0;
+        <button id="clearInvestigationBtn">
+        Clear Investigation
+        </button>
+    </div>
+    </section>
 
-    for (let number = 1; number <= 5; number++) {
-        let answer = document.querySelector(
-            'input[name="question' + number + '"]:checked'
-        );
+    
+    <section class="card" id="privacySimulator">
+    <h2>Privacy Protection Simulator</h2>
 
-        if (answer === null) {
-            document.getElementById("result").innerHTML =
-                "Please answer every question.";
-            return;
-        }
+    <p>
+        Discover how hiding publicly shared information
+        changes the number of possible identities.
+    </p>
 
-        score = score + Number(answer.value);
-    }
+    <div class="protection-options" id="protectionOptions">
+    </div>
 
-    let message = "";
+    <div class="comparison">
+        <div class="comparison-card before">
+        <h3>Before Protection</h3>
+        <div class="comparison-number" id="beforeCount">—</div>
+        <p>Matching fictional profiles</p>
+        </div>
 
-    if (score <= 3) {
-        message = "Low Risk 🟢 — Your privacy habits are good!";
-    } else if (score <= 6) {
-        message = "Medium Risk 🟠 — Some of your habits need improvement.";
-    } else {
-        message = "High Risk 🔴 — You should protect your information.";
-    }
+        <div class="comparison-card after">
+        <h3>After Protection</h3>
+        <div class="comparison-number" id="afterCount">—</div>
+        <p>Matching fictional profiles</p>
+        </div>
+    </div>
 
-    document.getElementById("result").innerHTML =
-        "Your score is " + score + "/10.<br>" + message;
-}
-</script>
-<script>
-function calculateRisk() {
-    let score = 0;
-    let recommendations = [];
+    <p id="protectionMessage" class="protection-message"></p>
 
-    for (let number = 1; number <= 5; number++) {
-        let answer = document.querySelector(
-            'input[name="question' + number + '"]:checked'
-        );
+    <button id="resetProtectionBtn">
+        Reset Protection
+    </button>
+    </section>
 
-        if (answer === null) {
-            document.getElementById("result").innerHTML =
-                "Please answer every question.";
-            return;
-        }
 
-        score = score + Number(answer.value);
 
-        if (Number(answer.value) > 0) {
-            if (number === 1) {
-                recommendations.push(
-                    "Make your social-media accounts private."
-                );
-            }
 
-            if (number === 2) {
-                recommendations.push(
-                    "Turn off location sharing."
-                );
-            }
+    <section class="card">
+      <h2>How This Relates to Privacy</h2>
+      <p>
+        Age, city, university, and other details
+        can act as quasi-identifiers.
+        Combining them may narrow down
+        a person's possible identity.
+      </p>
+      <p class="note">
+        All profiles are fictional. A unique
+        match in this sample does not prove
+        that a real person can be identified.
+      </p>
+    </section>
 
-            if (number === 3) {
-                recommendations.push(
-                    "Do not post your phone number online."
-                );
-            }
-
-            if (number === 4) {
-                recommendations.push(
-                    "Use a different password for every account."
-                );
-            }
-
-            if (number === 5) {
-                recommendations.push(
-                    "Do not accept friend requests from strangers."
-                );
-            }
-        }
-    }
-
-    let riskLevel = "";
-    let color = "";
-
-    if (score <= 3) {
-        riskLevel = "Low Risk — Your privacy habits are good!";
-        color = "#d1fae5";
-    } else if (score <= 6) {
-        riskLevel = "Medium Risk — Some habits need improvement.";
-        color = "#fef3c7";
-    } else {
-        riskLevel = "High Risk — Protect your information now.";
-        color = "#fee2e2";
-    }
-
-    let advice = "";
-
-    if (recommendations.length === 0) {
-        advice = "<p>Great job! Continue protecting your information.</p>";
-    } else {
-        advice = "<h3>Your Safety Recommendations:</h3><ul>";
-
-        for (let recommendation of recommendations) {
-            advice += "<li>" + recommendation + "</li>";
-        }
-
-        advice += "</ul>";
-    }
-
-    let resultBox = document.getElementById("result");
-
-    resultBox.innerHTML =
-        "<strong>Your score: " + score + "/10</strong><br>" +
-        riskLevel + advice;
-
-    resultBox.style.backgroundColor = color;
-}
-</script>
+  </main>
 </body>
 </html>
