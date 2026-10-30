@@ -310,6 +310,41 @@
                 recommendationText += "</ul>";
             }
 
+            const riskName = riskLevel.split(" — ")[0];
+
+localStorage.setItem("privacyResults", JSON.stringify({
+    totalScore: score * 10,
+    riskLevel: riskName,
+
+    categories: {
+        accountVisibility: Number(
+            document.querySelector(
+                'input[name="question1"]:checked'
+            ).value
+        ) * 5,
+
+        personalInformation: Number(
+            document.querySelector(
+                'input[name="question3"]:checked'
+            ).value
+        ) * 5,
+
+        locationSharing: Number(
+            document.querySelector(
+                'input[name="question2"]:checked'
+            ).value
+        ) * 5,
+
+        strangerInteraction: Number(
+            document.querySelector(
+                'input[name="question5"]:checked'
+            ).value
+        ) * 5
+    },
+
+    riskyHabits: recommendations
+}));
+            
             const resultBox = document.getElementById("result");
 
             resultBox.innerHTML =
