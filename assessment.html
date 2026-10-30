@@ -1,174 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Risk Assessment</title>
+
+    <title>SocialShield Privacy Assessment</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .assessment-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 35px 20px;
+        }
+
+        .assessment-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 6px 25px rgba(30, 40, 80, 0.07);
+        }
+
+        .question {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f7fd;
+            border-radius: 12px;
+        }
+
+        .question h3 {
+            margin-top: 0;
+            color: #303653;
+        }
+
+        .answer {
+            display: block;
+            margin: 12px 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .answer input {
+            margin-right: 8px;
+        }
+
+        .calculate-button {
+            display: block;
+            margin: 30px auto 20px;
+            font-size: 16px;
+        }
+
+        #result {
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 1.7;
+        }
+
+        #result ul {
+            text-align: left;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .navigation a {
+            background: #263b80;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            background: #3f58ad;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Privacy Risk Assessment Tool</h1>
 
-    <p>
-        Answer these questions to discover if your personal
-        information is safe online.
-    </p>
+    <header>
+        <div class="logo">🛡️ SocialShield</div>
 
-    <form id="privacyForm">
+        <h1>Privacy Risk Assessment</h1>
 
-        <h3>1. Is your social-media account public?</h3>
-        <label><input type="radio" name="question1" value="0"> No</label>
-        <label><input type="radio" name="question1" value="1"> Sometimes</label>
-        <label><input type="radio" name="question1" value="2"> Yes</label>
+        <p>
+            Answer the questions to discover your social media privacy risk.
+        </p>
+    </header>
 
-        <h3>2. Do you share your location online?</h3>
-        <label><input type="radio" name="question2" value="0"> No</label>
-        <label><input type="radio" name="question2" value="1"> Sometimes</label>
-        <label><input type="radio" name="question2" value="2"> Yes</label>
+    <main class="assessment-container">
 
-        <h3>3. Do you share your phone number online?</h3>
-        <label><input type="radio" name="question3" value="0"> No</label>
-        <label><input type="radio" name="question3" value="1"> Sometimes</label>
-        <label><input type="radio" name="question3" value="2"> Yes</label>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="detective.html">Digital Footprint Detective</a>
+            <a href="dashboard.html">Privacy Dashboard</a>
+        </nav>
 
-        <h3>4. Do you use the same password for different accounts?</h3>
-        <label><input type="radio" name="question4" value="0"> No</label>
-        <label><input type="radio" name="question4" value="1"> Sometimes</label>
-        <label><input type="radio" name="question4" value="2"> Yes</label>
+        <section class="assessment-card">
 
-        <h3>5. Do you accept friend requests from strangers?</h3>
-        <label><input type="radio" name="question5" value="0"> No</label>
-        <label><input type="radio" name="question5" value="1"> Sometimes</label>
-        <label><input type="radio" name="question5" value="2"> Yes</label>
+            <form id="privacyForm">
 
-        <br><br>
+                <div class="question">
+                    <h3>1. Is your social-media account public?</h3>
 
-        <button type="button" onclick="calculateRisk()">
-    Calculate My Risk
-</button>
+                    <label class="answer">
+                        <input type="radio" name="question1" value="0">
+                        No
+                    </label>
 
-<h2 id="result"></h2>
-    </form>
+                    <label class="answer">
+                        <input type="radio" name="question1" value="1">
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question1" value="2">
+                        Yes
+                    </label>
+                </div>
+
+                <div class="question">
+                    <h3>2. Do you share your location online?</h3>
+
+                    <label class="answer">
+                        <input type="radio" name="question2" value="0">
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question2" value="1">
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question2" value="2">
+                        Yes
+                    </label>
+                </div>
+
+                <div class="question">
+                    <h3>3. Do you share your phone number online?</h3>
+
+                    <label class="answer">
+                        <input type="radio" name="question3" value="0">
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question3" value="1">
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question3" value="2">
+                        Yes
+                    </label>
+                </div>
+
+                <div class="question">
+                    <h3>4. Do you use the same password for different accounts?</h3>
+
+                    <label class="answer">
+                        <input type="radio" name="question4" value="0">
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question4" value="1">
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question4" value="2">
+                        Yes
+                    </label>
+                </div>
+
+                <div class="question">
+                    <h3>5. Do you accept friend requests from strangers?</h3>
+
+                    <label class="answer">
+                        <input type="radio" name="question5" value="0">
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question5" value="1">
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input type="radio" name="question5" value="2">
+                        Yes
+                    </label>
+                </div>
+
+                <button
+                    type="button"
+                    class="calculate-button"
+                    onclick="calculateRisk()">
+                    Calculate My Risk
+                </button>
+
+                <div id="result"></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
     <script>
-function calculateRisk() {
-    let score = 0;
+        function calculateRisk() {
+            let score = 0;
+            let recommendations = [];
 
-    for (let number = 1; number <= 5; number++) {
-        let answer = document.querySelector(
-            'input[name="question' + number + '"]:checked'
-        );
+            for (let number = 1; number <= 5; number++) {
+                const answer = document.querySelector(
+                    'input[name="question' + number + '"]:checked'
+                );
 
-        if (answer === null) {
-            document.getElementById("result").innerHTML =
-                "Please answer every question.";
-            return;
+                if (answer === null) {
+                    const resultBox = document.getElementById("result");
+
+                    resultBox.innerHTML =
+                        "Please answer every question.";
+
+                    resultBox.style.backgroundColor = "#fee2e2";
+
+                    return;
+                }
+
+                const answerValue = Number(answer.value);
+                score += answerValue;
+
+                if (answerValue > 0) {
+                    if (number === 1) {
+                        recommendations.push(
+                            "Make your social-media accounts private."
+                        );
+                    }
+
+                    if (number === 2) {
+                        recommendations.push(
+                            "Turn off location sharing."
+                        );
+                    }
+
+                    if (number === 3) {
+                        recommendations.push(
+                            "Do not post your phone number online."
+                        );
+                    }
+
+                    if (number === 4) {
+                        recommendations.push(
+                            "Use a different password for every account."
+                        );
+                    }
+
+                    if (number === 5) {
+                        recommendations.push(
+                            "Do not accept friend requests from strangers."
+                        );
+                    }
+                }
+            }
+
+            let riskLevel;
+            let backgroundColor;
+
+            if (score <= 3) {
+                riskLevel =
+                    "Low Risk — Your privacy habits are good!";
+                backgroundColor = "#d1fae5";
+            } else if (score <= 6) {
+                riskLevel =
+                    "Medium Risk — Some habits need improvement.";
+                backgroundColor = "#fef3c7";
+            } else {
+                riskLevel =
+                    "High Risk — Protect your information now.";
+                backgroundColor = "#fee2e2";
+            }
+
+            let recommendationText;
+
+            if (recommendations.length === 0) {
+                recommendationText =
+                    "<p>Great job! Continue protecting your information.</p>";
+            } else {
+                recommendationText =
+                    "<h3>Privacy Recommendations:</h3><ul>";
+
+                recommendations.forEach(function(recommendation) {
+                    recommendationText +=
+                        "<li>" + recommendation + "</li>";
+                });
+
+                recommendationText += "</ul>";
+            }
+
+            const resultBox = document.getElementById("result");
+
+            resultBox.innerHTML =
+                "<strong>Your score: " + score + "/10</strong><br>" +
+                riskLevel +
+                recommendationText;
+
+            resultBox.style.backgroundColor = backgroundColor;
         }
+    </script>
 
-        score = score + Number(answer.value);
-    }
-
-    let message = "";
-
-    if (score <= 3) {
-        message = "Low Risk 🟢 — Your privacy habits are good!";
-    } else if (score <= 6) {
-        message = "Medium Risk 🟠 — Some of your habits need improvement.";
-    } else {
-        message = "High Risk 🔴 — You should protect your information.";
-    }
-
-    document.getElementById("result").innerHTML =
-        "Your score is " + score + "/10.<br>" + message;
-}
-</script>
-<script>
-function calculateRisk() {
-    let score = 0;
-    let recommendations = [];
-
-    for (let number = 1; number <= 5; number++) {
-        let answer = document.querySelector(
-            'input[name="question' + number + '"]:checked'
-        );
-
-        if (answer === null) {
-            document.getElementById("result").innerHTML =
-                "Please answer every question.";
-            return;
-        }
-
-        score = score + Number(answer.value);
-
-        if (Number(answer.value) > 0) {
-            if (number === 1) {
-                recommendations.push(
-                    "Make your social-media accounts private."
-                );
-            }
-
-            if (number === 2) {
-                recommendations.push(
-                    "Turn off location sharing."
-                );
-            }
-
-            if (number === 3) {
-                recommendations.push(
-                    "Do not post your phone number online."
-                );
-            }
-
-            if (number === 4) {
-                recommendations.push(
-                    "Use a different password for every account."
-                );
-            }
-
-            if (number === 5) {
-                recommendations.push(
-                    "Do not accept friend requests from strangers."
-                );
-            }
-        }
-    }
-
-    let riskLevel = "";
-    let color = "";
-
-    if (score <= 3) {
-        riskLevel = "Low Risk — Your privacy habits are good!";
-        color = "#d1fae5";
-    } else if (score <= 6) {
-        riskLevel = "Medium Risk — Some habits need improvement.";
-        color = "#fef3c7";
-    } else {
-        riskLevel = "High Risk — Protect your information now.";
-        color = "#fee2e2";
-    }
-
-    let advice = "";
-
-    if (recommendations.length === 0) {
-        advice = "<p>Great job! Continue protecting your information.</p>";
-    } else {
-        advice = "<h3>Your Safety Recommendations:</h3><ul>";
-
-        for (let recommendation of recommendations) {
-            advice += "<li>" + recommendation + "</li>";
-        }
-
-        advice += "</ul>";
-    }
-
-    let resultBox = document.getElementById("result");
-
-    resultBox.innerHTML =
-        "<strong>Your score: " + score + "/10</strong><br>" +
-        riskLevel + advice;
-
-    resultBox.style.backgroundColor = color;
-}
-</script>
 </body>
+
 </html>
