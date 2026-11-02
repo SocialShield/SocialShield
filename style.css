@@ -663,3 +663,16 @@ main:not(.container):not(.home-container):not(.assessment-container):not(.recomm
   background: #e05252;
   transition: width 0.4s;
 }
+header {
+  background: #263b80;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-bottom: 35px;
+}
+
+header .logo,
+header h1,
+header p {
+  color: white;
+}
