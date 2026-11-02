@@ -600,20 +600,24 @@ button:hover {
 }
 /* Dashboard layout */
 
-body {
-  background: #f2f5fb;
-}
+/* Match the shared page header */
 
 body > header {
   background: #263b80;
   color: white;
   text-align: center;
   padding: 25px;
-  margin-bottom: 25px;
+  margin: 0 0 25px;
+}
+
+body > header .logo,
+body > header p {
+  color: white;
 }
 
 body > header .logo {
-  color: white;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 main:not(.container):not(.home-container):not(.assessment-container):not(.recommendations-container) {
