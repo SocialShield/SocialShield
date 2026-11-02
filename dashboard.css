@@ -142,3 +142,20 @@ input {
 .navbar a:hover {
   background: #3f58ad;
 }
+/* Match dashboard header font sizes */
+
+body > header {
+  padding: 30px 20px 38px !important;
+}
+
+body > header .logo {
+  color: white !important;
+  font-size: 28px !important;
+}
+
+body > header p {
+  color: white !important;
+  font-size: 19px !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+}
