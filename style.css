@@ -628,16 +628,3 @@ header p {
   margin: 0;
 }
 
-header {
-  background: #263b80;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  margin-bottom: 35px;
-}
-
-header .logo,
-header h1,
-header p {
-  color: white;
-}
