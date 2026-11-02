@@ -404,26 +404,6 @@ button:hover {
   padding: 35px 20px 60px;
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 25px;
-}
-
-.navigation a {
-  padding: 11px 17px;
-  background: #263b80;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navigation a:hover {
-  background: #3f58ad;
-}
 
 .recommendations-card {
   padding: 30px;
