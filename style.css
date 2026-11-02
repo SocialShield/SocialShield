@@ -605,14 +605,27 @@ header {
   background: #263b80;
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 30px 20px 38px;
   margin-bottom: 35px;
 }
 
-header .logo,
-header h1,
+header .logo {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+header h1 {
+  color: white;
+  font-size: 42px;
+  margin: 26px 0 16px;
+}
+
 header p {
   color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
 }
 
 header {
