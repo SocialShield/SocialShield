@@ -598,3 +598,68 @@ button:hover {
     font-size: 14px;
   }
 }
+/* Dashboard layout */
+
+body {
+  background: #f2f5fb;
+}
+
+body > header {
+  background: #263b80;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+body > header .logo {
+  color: white;
+}
+
+main:not(.container):not(.home-container):not(.assessment-container):not(.recommendations-container) {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 0 18px;
+}
+
+.score-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 22px;
+  text-align: center;
+  box-shadow: 0 4px 12px #00000018;
+}
+
+#score {
+  font-size: 60px;
+  font-weight: bold;
+  color: #d54848;
+}
+
+#riskLevel {
+  color: #d54848;
+}
+
+.category {
+  margin: 20px 0;
+}
+
+.category p {
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.bar {
+  height: 18px;
+  background: #e1e5ee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  width: 0%;
+  background: #e05252;
+  transition: width 0.4s;
+}
