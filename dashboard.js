@@ -3,32 +3,49 @@ const sampleResults = {
     riskLevel: "High Risk",
 
     categories: {
-        accountVisibility: 18,
-        personalInformation: 20,
-        locationSharing: 15,
-        strangerInteraction: 19
+        accountVisibility: 75,
+        personalInformation: 80,
+        locationSharing: 60,
+        strangerInteraction: 75
     },
 
     riskyHabits: [
-        "Your account is public",
-        "You share personal information",
-        "You share your location",
-        "You accept requests from strangers"
+        "Your account is public.",
+        "You share personal information.",
+        "You share your location.",
+        "You accept requests from strangers."
     ]
 };
 
+
+/*
+ * Get the results saved by assessment.html.
+ */
 function getResults() {
-    const savedResults = localStorage.getItem("privacyResults");
+    const savedResults =
+        localStorage.getItem("privacyResults");
 
     if (savedResults) {
-        return JSON.parse(savedResults);
+        try {
+            return JSON.parse(savedResults);
+        } catch (error) {
+            console.error(
+                "The saved assessment result is invalid.",
+                error
+            );
+        }
     }
 
     return sampleResults;
 }
 
+
 const results = getResults();
 
+
+/*
+ * Display the assessment results.
+ */
 function displayDashboard() {
     document.getElementById("score").textContent =
         results.totalScore + "%";
@@ -39,8 +56,12 @@ function displayDashboard() {
     document.getElementById("beforeScore").textContent =
         results.totalScore + "%";
 
+    document.getElementById("afterScore").textContent =
+        results.totalScore + "%";
+
     document.getElementById("riskDescription").textContent =
         getDescription(results.totalScore);
+
 
     displayCategory(
         "visibilityBar",
@@ -66,25 +87,68 @@ function displayDashboard() {
         results.categories.strangerInteraction
     );
 
-    const habitsList = document.getElementById("riskyHabits");
 
-    results.riskyHabits.forEach(habit => {
-        const item = document.createElement("li");
-        item.textContent = habit;
+    /*
+     * Display the risky habits.
+     */
+    const habitsList =
+        document.getElementById("riskyHabits");
+
+    habitsList.innerHTML = "";
+
+    if (
+        Array.isArray(results.riskyHabits) &&
+        results.riskyHabits.length > 0
+    ) {
+        results.riskyHabits.forEach(function (habit) {
+            const item =
+                document.createElement("li");
+
+            item.textContent = habit;
+
+            habitsList.appendChild(item);
+        });
+    } else {
+        const item =
+            document.createElement("li");
+
+        item.textContent =
+            "No major risky habits were found.";
+
         habitsList.appendChild(item);
-    });
+    }
 }
 
+
+/*
+ * Display one category as a percentage.
+ */
 function displayCategory(barId, scoreId, score) {
-    const percentage = (score / 25) * 100;
+    let percentage = Number(score);
+
+    if (Number.isNaN(percentage)) {
+        percentage = 0;
+    }
+
+    if (percentage < 0) {
+        percentage = 0;
+    }
+
+    if (percentage > 100) {
+        percentage = 100;
+    }
 
     document.getElementById(barId).style.width =
         percentage + "%";
 
     document.getElementById(scoreId).textContent =
-        score + "/25";
+        percentage + "%";
 }
 
+
+/*
+ * Return a description for the total score.
+ */
 function getDescription(score) {
     if (score <= 33) {
         return "Your privacy habits are relatively safe.";
@@ -97,6 +161,11 @@ function getDescription(score) {
     return "Several habits may expose too much personal information.";
 }
 
+
+/*
+ * The number of points removed by each
+ * improvement in the simulator.
+ */
 const improvements = {
     privateAccount: 15,
     disableLocation: 12,
@@ -104,20 +173,33 @@ const improvements = {
     blockStrangers: 10
 };
 
-Object.keys(improvements).forEach(id => {
-    document.getElementById(id).addEventListener(
-        "change",
-        updateSimulator
-    );
+
+/*
+ * Listen for changes to simulator checkboxes.
+ */
+Object.keys(improvements).forEach(function (id) {
+    const checkbox = document.getElementById(id);
+
+    if (checkbox) {
+        checkbox.addEventListener(
+            "change",
+            updateSimulator
+        );
+    }
 });
 
+
+/*
+ * Recalculate the risk after the user
+ * selects privacy improvements.
+ */
 function updateSimulator() {
     let newScore = results.totalScore;
 
-    Object.keys(improvements).forEach(id => {
+    Object.keys(improvements).forEach(function (id) {
         const checkbox = document.getElementById(id);
 
-        if (checkbox.checked) {
+        if (checkbox && checkbox.checked) {
             newScore -= improvements[id];
         }
     });
@@ -126,18 +208,26 @@ function updateSimulator() {
         newScore = 0;
     }
 
-    const improvement = results.totalScore - newScore;
+    const improvement =
+        results.totalScore - newScore;
 
     document.getElementById("afterScore").textContent =
         newScore + "%";
 
     document.getElementById("improvement").textContent =
-        "Improvement: " + improvement + " points";
+        "Improvement: " +
+        improvement +
+        " percentage points";
 
     document.getElementById("newRiskLevel").textContent =
-        "New risk level: " + getRiskLevel(newScore);
+        "New risk level: " +
+        getRiskLevel(newScore);
 }
 
+
+/*
+ * Return the new risk level.
+ */
 function getRiskLevel(score) {
     if (score <= 33) {
         return "Low Risk";
@@ -149,3 +239,10 @@ function getRiskLevel(score) {
 
     return "High Risk";
 }
+
+
+/*
+ * Run the dashboard when the page opens.
+ */
+displayDashboard();
+updateSimulator();
