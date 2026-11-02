@@ -396,7 +396,127 @@ button:hover {
   text-decoration: none;
   font-weight: bold;
 }
+/* Personalized Privacy Recommendations */
 
+.recommendations-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 35px 20px 60px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.navigation a {
+  padding: 11px 17px;
+  background: #263b80;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background: #3f58ad;
+}
+
+.recommendations-card {
+  padding: 30px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(30, 40, 80, 0.07);
+}
+
+.recommendations-card > h2 {
+  color: #303653;
+  text-align: center;
+}
+
+.recommendations-card > p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#recommendationsList {
+  display: grid;
+  gap: 20px;
+}
+
+.recommendation-item {
+  padding: 22px;
+  background: #f8f7fd;
+  border: 1px solid #e6e2f3;
+  border-left: 5px solid #6353b8;
+  border-radius: 12px;
+}
+
+.recommendation-item h3 {
+  margin: 12px 0;
+  color: #303653;
+}
+
+.recommendation-item p {
+  margin: 8px 0;
+}
+
+.high-priority,
+.medium-priority {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.high-priority {
+  background: #fee2e2;
+  color: #b42318;
+}
+
+.medium-priority {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.recommendation-item.safe {
+  border-left-color: #16845b;
+  background: #edf9f3;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  margin: 22px auto;
+  padding: 12px 20px;
+  background: #6353b8;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #4e3d9e;
+}
+
+@media (max-width: 650px) {
+  .recommendations-card {
+    padding: 20px;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+  }
+}
 .dashboard-link:hover {
   background: #3f58ad;
 }
