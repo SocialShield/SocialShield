@@ -3,10 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>SocialShield Privacy Assessment</title>
 
+    <!-- Uses the group's main CSS file -->
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -49,10 +54,23 @@
         .calculate-button {
             display: block;
             margin: 30px auto 20px;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #263b80;
+            color: white;
             font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .calculate-button:hover {
+            background: #3f58ad;
         }
 
         #result {
+            display: none;
+            margin-top: 25px;
             padding: 20px;
             border-radius: 12px;
             line-height: 1.7;
@@ -82,6 +100,22 @@
         .navigation a:hover {
             background: #3f58ad;
         }
+
+        #dashboardLink {
+            display: none;
+            width: fit-content;
+            margin: 20px auto 0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: #263b80;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #dashboardLink:hover {
+            background: #3f58ad;
+        }
     </style>
 </head>
 
@@ -93,7 +127,8 @@
         <h1>Privacy Risk Assessment</h1>
 
         <p>
-            Answer the questions to discover your social media privacy risk.
+            Answer all 12 questions to discover your
+            social-media privacy-risk level.
         </p>
     </header>
 
@@ -101,105 +136,441 @@
 
         <nav class="navigation">
             <a href="index.html">Home</a>
-            <a href="detective.html">Digital Footprint Detective</a>
-            <a href="dashboard.html">Privacy Dashboard</a>
+
+            <a href="detective.html">
+                Digital Footprint Detective
+            </a>
+
+            <a href="dashboard.html">
+                Privacy Dashboard
+            </a>
         </nav>
 
         <section class="assessment-card">
 
             <form id="privacyForm">
 
+                <!-- Question 1 -->
+
                 <div class="question">
-                    <h3>1. Is your social-media account public?</h3>
+                    <h3>
+                        1. Is your social-media account public?
+                    </h3>
 
                     <label class="answer">
-                        <input type="radio" name="question1" value="0">
+                        <input
+                            type="radio"
+                            name="question1"
+                            value="0"
+                        >
                         No
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question1" value="1">
+                        <input
+                            type="radio"
+                            name="question1"
+                            value="1"
+                        >
                         Sometimes
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question1" value="2">
+                        <input
+                            type="radio"
+                            name="question1"
+                            value="2"
+                        >
                         Yes
                     </label>
                 </div>
 
+                <!-- Question 2 -->
+
                 <div class="question">
-                    <h3>2. Do you share your location online?</h3>
+                    <h3>
+                        2. Do you share your live location online?
+                    </h3>
 
                     <label class="answer">
-                        <input type="radio" name="question2" value="0">
+                        <input
+                            type="radio"
+                            name="question2"
+                            value="0"
+                        >
                         No
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question2" value="1">
+                        <input
+                            type="radio"
+                            name="question2"
+                            value="1"
+                        >
                         Sometimes
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question2" value="2">
+                        <input
+                            type="radio"
+                            name="question2"
+                            value="2"
+                        >
                         Yes
                     </label>
                 </div>
 
+                <!-- Question 3 -->
+
                 <div class="question">
-                    <h3>3. Do you share your phone number online?</h3>
+                    <h3>
+                        3. Do you display your phone number
+                        or email publicly?
+                    </h3>
 
                     <label class="answer">
-                        <input type="radio" name="question3" value="0">
+                        <input
+                            type="radio"
+                            name="question3"
+                            value="0"
+                        >
                         No
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question3" value="1">
+                        <input
+                            type="radio"
+                            name="question3"
+                            value="1"
+                        >
                         Sometimes
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question3" value="2">
+                        <input
+                            type="radio"
+                            name="question3"
+                            value="2"
+                        >
                         Yes
                     </label>
                 </div>
 
+                <!-- Question 4 -->
+
                 <div class="question">
-                    <h3>4. Do you use the same password for different accounts?</h3>
+                    <h3>
+                        4. Do you share your complete date of birth?
+                    </h3>
 
                     <label class="answer">
-                        <input type="radio" name="question4" value="0">
+                        <input
+                            type="radio"
+                            name="question4"
+                            value="0"
+                        >
                         No
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question4" value="1">
+                        <input
+                            type="radio"
+                            name="question4"
+                            value="1"
+                        >
                         Sometimes
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question4" value="2">
+                        <input
+                            type="radio"
+                            name="question4"
+                            value="2"
+                        >
                         Yes
                     </label>
                 </div>
 
+                <!-- Question 5 -->
+
                 <div class="question">
-                    <h3>5. Do you accept friend requests from strangers?</h3>
+                    <h3>
+                        5. Do you accept friend requests from strangers?
+                    </h3>
 
                     <label class="answer">
-                        <input type="radio" name="question5" value="0">
+                        <input
+                            type="radio"
+                            name="question5"
+                            value="0"
+                        >
                         No
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question5" value="1">
+                        <input
+                            type="radio"
+                            name="question5"
+                            value="1"
+                        >
                         Sometimes
                     </label>
 
                     <label class="answer">
-                        <input type="radio" name="question5" value="2">
+                        <input
+                            type="radio"
+                            name="question5"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 6 -->
+
+                <div class="question">
+                    <h3>
+                        6. Do you reuse the same password
+                        on different accounts?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question6"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question6"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question6"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 7 -->
+
+                <div class="question">
+                    <h3>
+                        7. Do you click links sent by unknown accounts?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question7"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question7"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question7"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 8 -->
+
+                <div class="question">
+                    <h3>
+                        8. Do you publicly share your school,
+                        workplace, or home area?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question8"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question8"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question8"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 9 -->
+
+                <div class="question">
+                    <h3>
+                        9. Do you post travel plans while you are away?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question9"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question9"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question9"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 10 -->
+
+                <div class="question">
+                    <h3>
+                        10. Do you avoid checking your privacy settings?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question10"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question10"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question10"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 11 -->
+
+                <div class="question">
+                    <h3>
+                        11. Do you give applications permissions
+                        they do not need?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question11"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question11"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question11"
+                            value="2"
+                        >
+                        Yes
+                    </label>
+                </div>
+
+                <!-- Question 12 -->
+
+                <div class="question">
+                    <h3>
+                        12. Do your photographs reveal
+                        identifying information?
+                    </h3>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question12"
+                            value="0"
+                        >
+                        No
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question12"
+                            value="1"
+                        >
+                        Sometimes
+                    </label>
+
+                    <label class="answer">
+                        <input
+                            type="radio"
+                            name="question12"
+                            value="2"
+                        >
                         Yes
                     </label>
                 </div>
@@ -207,11 +578,19 @@
                 <button
                     type="button"
                     class="calculate-button"
-                    onclick="calculateRisk()">
+                    onclick="calculateRisk()"
+                >
                     Calculate My Risk
                 </button>
 
                 <div id="result"></div>
+
+                <a
+                    id="dashboardLink"
+                    href="dashboard.html"
+                >
+                    Continue to Privacy Dashboard
+                </a>
 
             </form>
 
@@ -220,139 +599,308 @@
     </main>
 
     <script>
+        /*
+         * Returns the selected numerical value
+         * for one question.
+         */
+        function getAnswer(questionNumber) {
+            const selectedAnswer = document.querySelector(
+                'input[name="question' +
+                questionNumber +
+                '"]:checked'
+            );
+
+            if (selectedAnswer === null) {
+                return null;
+            }
+
+            return Number(selectedAnswer.value);
+        }
+
         function calculateRisk() {
             let score = 0;
-            let recommendations = [];
 
-            for (let number = 1; number <= 5; number++) {
-                const answer = document.querySelector(
-                    'input[name="question' + number + '"]:checked'
-                );
+            const answers = {};
+            const recommendations = [];
 
-                if (answer === null) {
-                    const resultBox = document.getElementById("result");
+            /*
+             * Check all 12 questions.
+             */
+            for (let number = 1; number <= 12; number++) {
+                const answerValue = getAnswer(number);
+
+                if (answerValue === null) {
+                    const resultBox =
+                        document.getElementById("result");
+
+                    resultBox.style.display = "block";
 
                     resultBox.innerHTML =
-                        "Please answer every question.";
+                        "<strong>Please answer all 12 questions.</strong>";
 
                     resultBox.style.backgroundColor = "#fee2e2";
+
+                    /*
+                     * Move the page to the warning.
+                     */
+                    resultBox.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
 
                     return;
                 }
 
-                const answerValue = Number(answer.value);
+                answers["question" + number] = answerValue;
                 score += answerValue;
-
-                if (answerValue > 0) {
-                    if (number === 1) {
-                        recommendations.push(
-                            "Make your social-media accounts private."
-                        );
-                    }
-
-                    if (number === 2) {
-                        recommendations.push(
-                            "Turn off location sharing."
-                        );
-                    }
-
-                    if (number === 3) {
-                        recommendations.push(
-                            "Do not post your phone number online."
-                        );
-                    }
-
-                    if (number === 4) {
-                        recommendations.push(
-                            "Use a different password for every account."
-                        );
-                    }
-
-                    if (number === 5) {
-                        recommendations.push(
-                            "Do not accept friend requests from strangers."
-                        );
-                    }
-                }
             }
 
-            let riskLevel;
+            /*
+             * Add recommendations for risky answers.
+             */
+
+            if (answers.question1 > 0) {
+                recommendations.push(
+                    "Make your social-media accounts private."
+                );
+            }
+
+            if (answers.question2 > 0) {
+                recommendations.push(
+                    "Turn off live-location sharing."
+                );
+            }
+
+            if (answers.question3 > 0) {
+                recommendations.push(
+                    "Hide your phone number and email address."
+                );
+            }
+
+            if (answers.question4 > 0) {
+                recommendations.push(
+                    "Do not publicly share your complete date of birth."
+                );
+            }
+
+            if (answers.question5 > 0) {
+                recommendations.push(
+                    "Do not accept requests from people you do not know."
+                );
+            }
+
+            if (answers.question6 > 0) {
+                recommendations.push(
+                    "Use a different password for every account."
+                );
+            }
+
+            if (answers.question7 > 0) {
+                recommendations.push(
+                    "Do not open links sent by unknown accounts."
+                );
+            }
+
+            if (answers.question8 > 0) {
+                recommendations.push(
+                    "Limit public information about your school, workplace, and home area."
+                );
+            }
+
+            if (answers.question9 > 0) {
+                recommendations.push(
+                    "Post travel information after returning home."
+                );
+            }
+
+            if (answers.question10 > 0) {
+                recommendations.push(
+                    "Review your social-media privacy settings regularly."
+                );
+            }
+
+            if (answers.question11 > 0) {
+                recommendations.push(
+                    "Remove application permissions that are not needed."
+                );
+            }
+
+            if (answers.question12 > 0) {
+                recommendations.push(
+                    "Check photographs for names, addresses, badges, and location clues before posting."
+                );
+            }
+
+            /*
+             * Decide the risk level.
+             */
+
+            let riskName;
+            let riskMessage;
             let backgroundColor;
 
-            if (score <= 3) {
-                riskLevel =
-                    "Low Risk — Your privacy habits are good!";
+            if (score <= 8) {
+                riskName = "Low Risk";
+
+                riskMessage =
+                    "Your privacy habits are generally safe.";
+
                 backgroundColor = "#d1fae5";
-            } else if (score <= 6) {
-                riskLevel =
-                    "Medium Risk — Some habits need improvement.";
+            } else if (score <= 16) {
+                riskName = "Medium Risk";
+
+                riskMessage =
+                    "Some of your habits need improvement.";
+
                 backgroundColor = "#fef3c7";
             } else {
-                riskLevel =
-                    "High Risk — Protect your information now.";
+                riskName = "High Risk";
+
+                riskMessage =
+                    "You should improve several privacy habits.";
+
                 backgroundColor = "#fee2e2";
             }
 
-            let recommendationText;
+            /*
+             * Convert the score to a percentage
+             * for the dashboard.
+             */
+
+            const percentage = Math.round(
+                (score / 24) * 100
+            );
+
+            /*
+             * Category scores for the dashboard.
+             * Every category is converted to 0–100.
+             */
+
+            const accountVisibility = Math.round(
+                (answers.question1 / 2) * 100
+            );
+
+            const personalInformation = Math.round(
+                (
+                    answers.question3 +
+                    answers.question4 +
+                    answers.question8 +
+                    answers.question12
+                ) / 8 * 100
+            );
+
+            const locationSharing = Math.round(
+                (
+                    answers.question2 +
+                    answers.question9
+                ) / 4 * 100
+            );
+
+            const strangerInteraction = Math.round(
+                (answers.question5 / 2) * 100
+            );
+
+            const accountSecurity = Math.round(
+                (
+                    answers.question6 +
+                    answers.question7 +
+                    answers.question10 +
+                    answers.question11
+                ) / 8 * 100
+            );
+
+            /*
+             * Save everything for the dashboard
+             * and recommendation pages.
+             */
+
+            const privacyResults = {
+                rawScore: score,
+                maximumScore: 24,
+                totalScore: percentage,
+                percentage: percentage,
+                riskLevel: riskName,
+
+                categories: {
+                    accountVisibility: accountVisibility,
+                    personalInformation: personalInformation,
+                    locationSharing: locationSharing,
+                    strangerInteraction: strangerInteraction,
+                    accountSecurity: accountSecurity
+                },
+
+                answers: answers,
+                riskyHabits: recommendations
+            };
+
+            localStorage.setItem(
+                "privacyResults",
+                JSON.stringify(privacyResults)
+            );
+
+            /*
+             * Create the recommendation list.
+             */
+
+            let recommendationText = "";
 
             if (recommendations.length === 0) {
                 recommendationText =
                     "<p>Great job! Continue protecting your information.</p>";
             } else {
                 recommendationText =
-                    "<h3>Privacy Recommendations:</h3><ul>";
+                    "<h3>Privacy Recommendations</h3><ul>";
 
-                recommendations.forEach(function(recommendation) {
-                    recommendationText +=
-                        "<li>" + recommendation + "</li>";
-                });
+                recommendations.forEach(
+                    function (recommendation) {
+                        recommendationText +=
+                            "<li>" +
+                            recommendation +
+                            "</li>";
+                    }
+                );
 
                 recommendationText += "</ul>";
             }
 
-            const riskName = riskLevel.split(" — ")[0];
+            /*
+             * Display the result.
+             */
 
-localStorage.setItem("privacyResults", JSON.stringify({
-    totalScore: score * 10,
-    riskLevel: riskName,
+            const resultBox =
+                document.getElementById("result");
 
-    categories: {
-        accountVisibility: Number(
-            document.querySelector(
-                'input[name="question1"]:checked'
-            ).value
-        ) * 5,
-
-        personalInformation: Number(
-            document.querySelector(
-                'input[name="question3"]:checked'
-            ).value
-        ) * 5,
-
-        locationSharing: Number(
-            document.querySelector(
-                'input[name="question2"]:checked'
-            ).value
-        ) * 5,
-
-        strangerInteraction: Number(
-            document.querySelector(
-                'input[name="question5"]:checked'
-            ).value
-        ) * 5
-    },
-
-    riskyHabits: recommendations
-}));
-            
-            const resultBox = document.getElementById("result");
+            resultBox.style.display = "block";
+            resultBox.style.backgroundColor = backgroundColor;
 
             resultBox.innerHTML =
-                "<strong>Your score: " + score + "/10</strong><br>" +
-                riskLevel +
+                "<h2>" + riskName + "</h2>" +
+                "<p><strong>Your score: " +
+                score +
+                "/24 (" +
+                percentage +
+                "%)</strong></p>" +
+                "<p>" +
+                riskMessage +
+                "</p>" +
                 recommendationText;
 
-            resultBox.style.backgroundColor = backgroundColor;
+            /*
+             * Show the dashboard button.
+             */
+
+            document.getElementById(
+                "dashboardLink"
+            ).style.display = "block";
+
+            /*
+             * Move the page to the result.
+             */
+
+            resultBox.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         }
     </script>
 
