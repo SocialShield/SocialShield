@@ -601,72 +601,20 @@ button:hover {
 /* Dashboard layout */
 
 /* Match the shared page header */
-
-body > header {
+header {
   background: #263b80;
   color: white;
   text-align: center;
   padding: 25px;
-  margin: 0 0 25px;
+  margin-bottom: 35px;
 }
 
-body > header .logo,
-body > header p {
+header .logo,
+header h1,
+header p {
   color: white;
 }
 
-body > header .logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-main:not(.container):not(.home-container):not(.assessment-container):not(.recommendations-container) {
-  max-width: 900px;
-  margin: 25px auto;
-  padding: 0 18px;
-}
-
-.score-card {
-  background: white;
-  border-radius: 14px;
-  padding: 24px;
-  margin-bottom: 22px;
-  text-align: center;
-  box-shadow: 0 4px 12px #00000018;
-}
-
-#score {
-  font-size: 60px;
-  font-weight: bold;
-  color: #d54848;
-}
-
-#riskLevel {
-  color: #d54848;
-}
-
-.category {
-  margin: 20px 0;
-}
-
-.category p {
-  margin-bottom: 7px;
-  font-weight: bold;
-}
-
-.bar {
-  height: 18px;
-  background: #e1e5ee;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.bar div {
-  height: 100%;
-  width: 0%;
-  background: #e05252;
-  transition: width 0.4s;
-}
 header {
   background: #263b80;
   color: white;
