@@ -489,13 +489,7 @@ button:hover {
     padding: 20px;
   }
 
-  .navigation {
-    flex-direction: column;
-  }
 
-  .navigation a {
-    text-align: center;
-  }
 }
 .dashboard-link:hover {
   background: #3f58ad;
