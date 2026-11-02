@@ -520,3 +520,62 @@ button:hover {
 .dashboard-link:hover {
   background: #3f58ad;
 }
+/* Homepage */
+
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 20px 60px;
+}
+
+.welcome-card {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  display: block;
+  padding: 28px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(30, 40, 80, 0.08);
+  color: #202642;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(30, 40, 80, 0.15);
+}
+
+.feature-card h2 {
+  color: #6353b8;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #596178;
+  min-height: 60px;
+}
+
+.feature-card span {
+  color: #263b80;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card p {
+    min-height: auto;
+  }
+}
